@@ -1,0 +1,30 @@
+def translate_to_piglatin(sentence_to_translate_param) :
+  translated_list = []
+  vowels_list = ['a', 'e,' 'i', 'o', 'u']
+  consonants_list = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
+  # WE TAKE THE sentence_to_translate_param AND SPLIT THAT INTO A LIST OF WORDS
+  sentence_list = sentence_to_translate_param.split()
+
+  # LOOP THROUGH THE sentence_list AND CHECK TRANSLATE EACH INDIVIDUAL WORD
+  for word in sentence_list :
+    # THIS INSIDE LOOP WILL LET US CHECK THE LETTER AT word[0] AGAINST THE LIST OF VOWELS
+    for letter in vowels_list :
+    # IF THE WORD STARTS WITH A VOWEL, ADD 'way' TO THE END OF THE WORD
+      if(word[0] == vowels_list[letter]) :
+        word = word + 'way'
+        translated_list.append(word)
+
+    # IF THE WORD STARTS WITH A CONSONANT, ADD 'way' TO THE END OF THE WORD
+      if(word[0] == vowels_list[letter]) :
+        word = word + 'way'
+        translated_list.append(word)
+    
+
+    translated_list.append(word)
+
+
+  
+
+
+sentence = 'Consonants and vowels correspond to distinct parts'
+translate_to_piglatin(sentence)
